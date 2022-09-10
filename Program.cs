@@ -1,9 +1,23 @@
 ﻿namespace OOP
 {
-    class Program
+    partial class Program
     {
         static void Main()
         {
+            Vector v1 = new Vector(1, 2);
+            Vector v2 = new Vector(3, 4);
+            Vector v3 = v1.Scale(5);
+            Console.WriteLine(v3.GetVector());
+
+            // FileCrawler crawler = new FileCrawler(@"C:\Users\User\OneDrive - Aalborg Universitet\Uni\SW3");
+            // FileCrawler crawler1 = new FileCrawler(@"C:\Users\User\OneDrive - Aalborg Universitet\Uni\SW3");
+            // Console.WriteLine(crawler1==crawler);
+            // Console.WriteLine($"{crawler1.Equals(crawler)} {crawler1.GetHashCode()} {crawler.GetHashCode()}");
+
+            // // crawler.FileSize();
+            // crawler.DirInfo();
+
+            // PersonPrinter printer = new PersonPrinter();
             // Console.WriteLine($"{RadianToDegree(2*Math.PI)} == {RadianToDegree(0)} is {RadianToDegree(2*Math.PI) == RadianToDegree(0)}");
             // Console.WriteLine($"{DegreeToRadian(360)} == {DegreeToRadian(0)} is {DegreeToRadian(360) == DegreeToRadian(0)}");
             // PrintStars(5);
@@ -11,7 +25,17 @@
             // StringSqrt();
             // GroupMembersArray();
             // GroupMembersList();
-            
+            // Person moritz = new Person("Malthe", "Reipurth", 20);
+            // printer.PrintPerson(moritz);
+            // Console.WriteLine($"{moritz.FirstName} id: {moritz.ShowId()}");
+            // Person mor = new Person("Rikke","Reipurth", 50);
+            // Person far = new Person("Sti","Reipurth", 55);
+            // Person morfar = new Person("Per","Reipurth", 81);
+            // moritz.Far=far;
+            // moritz.Mor=mor;
+            // mor.Far=morfar;
+            // printer.PrintFamilyTree(moritz);
+
             static double RadianToDegree(double radian)
             {
                 double degree = radian * 180 / Math.PI;
@@ -50,12 +74,10 @@
             // program doesnt let user enter input
             // debug
             {
-                Console.Write("Enter a number: ");
-                string input = Console.ReadLine();
-
                 try
                 {
-                    int tal = int.Parse(input);
+                    Console.Write("Enter a number: ");
+                    int tal = int.Parse(Console.ReadLine());
                     Console.WriteLine($"Squareroot: {Math.Sqrt(tal)}");
                 }
                 catch
